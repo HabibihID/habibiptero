@@ -1,0 +1,117 @@
+/* ============================================================
+   HABIBI ECLIPSE v1.0.0 — tema original Habibih Cloud ID
+   Gaya: violet gelap misterius, efek kaca, nebula ungu.
+   Rancangan original (bukan salinan tema lain).
+   Ubah warna lewat variabel --he-* di bawah.
+   ============================================================ */
+:root {
+  --he-bg: #0c0919;
+  --he-bg-2: #120d28;
+  --he-surface: #1a1436;
+  --he-surface-2: #241b4d;
+  --he-glass: rgba(38, 28, 84, 0.55);
+  --he-border: rgba(167, 139, 250, 0.20);
+  --he-text: #ece9fb;
+  --he-muted: #9a92c4;
+  --he-accent: #8b5cf6;
+  --he-accent-2: #7c3aed;
+  --he-accent-soft: rgba(139, 92, 246, 0.18);
+  --he-pink: #d946ef;
+  --he-success: #34d399;
+  --he-danger: #f0524f;
+  --he-radius: 14px;
+}
+
+/* ---------- dasar + nebula ---------- */
+body {
+  background-color: var(--he-bg) !important;
+  color: var(--he-text);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(58rem 30rem at 108% -12%, rgba(139, 92, 246, 0.30), transparent 60%),
+    radial-gradient(44rem 24rem at -12% 108%, rgba(217, 70, 239, 0.13), transparent 60%),
+    radial-gradient(30rem 16rem at 78% 118%, rgba(76, 29, 149, 0.35), transparent 65%),
+    linear-gradient(155deg, var(--he-bg) 0%, var(--he-bg-2) 100%);
+}
+::selection { background: var(--he-accent); color: #ffffff; }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--he-surface-2) transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--he-surface-2); border-radius: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------- permukaan kaca ---------- */
+.bg-gray-900, .bg-neutral-900 { background-color: var(--he-bg-2) !important; }
+.bg-gray-800, .bg-neutral-800 {
+  background-color: var(--he-glass) !important;
+  border-color: var(--he-border) !important;
+  backdrop-filter: blur(10px);
+}
+.bg-gray-700, .bg-neutral-700 { background-color: var(--he-surface-2) !important; }
+.border-gray-700, .border-gray-800, .border-neutral-700, .border-neutral-800 {
+  border-color: var(--he-border) !important;
+}
+.shadow-md, .shadow-lg {
+  box-shadow: 0 14px 34px rgba(5, 2, 18, 0.55) !important;
+}
+.text-gray-400, .text-gray-500, .text-neutral-400 { color: var(--he-muted) !important; }
+
+/* ---------- tautan & aksen ---------- */
+a { color: #a78bfa; }
+a:hover { color: var(--he-accent); }
+
+/* ---------- tombol ---------- */
+.bg-primary-500, .bg-primary-600, .bg-blue-500, .bg-blue-600 {
+  background-color: var(--he-accent-2) !important;
+}
+.hover\:bg-primary-400:hover, .hover\:bg-primary-600:hover,
+.hover\:bg-blue-400:hover, .hover\:bg-blue-600:hover {
+  background-color: var(--he-accent) !important;
+}
+button { border-radius: 11px; }
+.bg-green-500, .bg-green-600 { background-color: #059669 !important; }
+.bg-red-500, .bg-red-600 { background-color: var(--he-danger) !important; }
+
+/* ---------- formulir ---------- */
+input, select, textarea {
+  background-color: rgba(18, 13, 40, 0.85) !important;
+  border-color: var(--he-border) !important;
+  color: var(--he-text) !important;
+  border-radius: 11px !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--he-accent) !important;
+  box-shadow: 0 0 0 3px var(--he-accent-soft), 0 0 18px rgba(139, 92, 246, 0.25) !important;
+  outline: none !important;
+}
+input::placeholder, textarea::placeholder { color: var(--he-muted) !important; }
+label { color: var(--he-muted); }
+
+/* ---------- navigasi ---------- */
+aside a, nav a { transition: background-color .15s ease, color .15s ease; }
+aside a:hover, nav a:hover { color: var(--he-text) !important; }
+
+/* ---------- konsol ---------- */
+.xterm, .xterm-viewport, .xterm-screen {
+  background-color: #070512 !important;
+}
+.xterm { padding: 6px; }
+
+/* ---------- login: kartu kaca di atas nebula ---------- */
+form { caret-color: var(--he-accent); }
+form button[type="submit"] {
+  background: linear-gradient(90deg, var(--he-accent-2), var(--he-accent)) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border: none !important;
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.35);
+}
+form button[type="submit"]:hover { filter: brightness(1.1); }

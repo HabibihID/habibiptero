@@ -1,0 +1,17 @@
+# https://blueprint.zip/docs/configs/confyml
+info:
+  name: "Habibi Eclipse"
+  identifier: "habibieclipse"
+  description: "Tema original Habibih Cloud ID: violet gelap misterius dengan efek kaca."
+  version: "v1.0.0"
+  target: "beta-2026-01"
+  author: "Habibih Cloud ID"
+  icon: "assets/icon.png"
+  website: "https://github.com/HabibihID/habibiptero"
+
+admin:
+  view: "admin/view.blade.php"
+  css: "admin/admin.style.css"
+
+dashboard:
+  css: "client/client.style.css"

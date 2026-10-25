@@ -1,0 +1,6 @@
+/* Habibi Eclipse — sentuhan admin (AdminLTE) */
+.skin-blue .main-header .logo,
+.skin-blue .main-header .navbar { background-color: #150f31 !important; }
+.skin-blue .sidebar-menu > li.active > a { border-left-color: #8b5cf6 !important; }
+a { color: #8b5cf6; }
+.btn-primary { background-color: #7c3aed !important; border-color: #6d28d9 !important; }
