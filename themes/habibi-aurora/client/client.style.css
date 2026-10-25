@@ -1,0 +1,111 @@
+/* ============================================================
+   HABIBI AURORA v1.0.0 — tema original Habibih Cloud ID
+   Gaya: navy indigo pekat, aksen biru primer, kartu server
+   bersih, login kartu tengah. Ubah warna lewat --ha-*.
+   ============================================================ */
+:root {
+  --ha-bg: #0b0d20;
+  --ha-bg-2: #10122b;
+  --ha-surface: #141736;
+  --ha-surface-2: #1b1e42;
+  --ha-border: rgba(129, 140, 248, 0.16);
+  --ha-text: #e8eaf6;
+  --ha-muted: #8f96bd;
+  --ha-accent: #3b82f6;
+  --ha-accent-2: #2563eb;
+  --ha-accent-soft: rgba(59, 130, 246, 0.16);
+  --ha-success: #22c55e;
+  --ha-danger: #ef4444;
+  --ha-radius: 12px;
+}
+
+/* ---------- dasar ---------- */
+body {
+  background-color: var(--ha-bg) !important;
+  color: var(--ha-text);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(55rem 28rem at 105% -10%, rgba(59, 130, 246, 0.16), transparent 60%),
+    radial-gradient(40rem 22rem at -10% 110%, rgba(99, 102, 241, 0.14), transparent 60%),
+    linear-gradient(165deg, var(--ha-bg) 0%, var(--ha-bg-2) 100%);
+}
+::selection { background: var(--ha-accent); color: #ffffff; }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ha-surface-2) transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--ha-surface-2); border-radius: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------- permukaan / kartu server ---------- */
+.bg-gray-900, .bg-neutral-900 { background-color: var(--ha-bg-2) !important; }
+.bg-gray-800, .bg-neutral-800 {
+  background-color: var(--ha-surface) !important;
+  border-color: var(--ha-border) !important;
+}
+.bg-gray-700, .bg-neutral-700 { background-color: var(--ha-surface-2) !important; }
+.border-gray-700, .border-gray-800, .border-neutral-700, .border-neutral-800 {
+  border-color: var(--ha-border) !important;
+}
+.shadow-md, .shadow-lg {
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.5) !important;
+}
+.text-gray-400, .text-gray-500, .text-neutral-400 { color: var(--ha-muted) !important; }
+
+/* ---------- tautan & aksen ---------- */
+a { color: var(--ha-accent); }
+a:hover { color: #60a5fa; }
+
+/* ---------- tombol ---------- */
+.bg-primary-500, .bg-primary-600, .bg-blue-500, .bg-blue-600 {
+  background-color: var(--ha-accent-2) !important;
+}
+.hover\:bg-primary-400:hover, .hover\:bg-primary-600:hover,
+.hover\:bg-blue-400:hover, .hover\:bg-blue-600:hover {
+  background-color: var(--ha-accent) !important;
+}
+button { border-radius: 9px; }
+.bg-green-500, .bg-green-600 { background-color: var(--ha-success) !important; }
+.bg-red-500, .bg-red-600 { background-color: var(--ha-danger) !important; }
+
+/* ---------- formulir ---------- */
+input, select, textarea {
+  background-color: var(--ha-bg-2) !important;
+  border-color: var(--ha-border) !important;
+  color: var(--ha-text) !important;
+  border-radius: 9px !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--ha-accent) !important;
+  box-shadow: 0 0 0 3px var(--ha-accent-soft) !important;
+  outline: none !important;
+}
+input::placeholder, textarea::placeholder { color: var(--ha-muted) !important; }
+label { color: var(--ha-muted); }
+
+/* ---------- navigasi ---------- */
+aside a, nav a { transition: background-color .15s ease, color .15s ease; }
+aside a:hover, nav a:hover { color: var(--ha-text) !important; }
+
+/* ---------- konsol ---------- */
+.xterm, .xterm-viewport, .xterm-screen {
+  background-color: #080a18 !important;
+}
+.xterm { padding: 6px; }
+
+/* ---------- login: kartu tengah simpel ---------- */
+form { caret-color: var(--ha-accent); }
+form button[type="submit"] {
+  background-color: var(--ha-accent-2) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border: none !important;
+}
+form button[type="submit"]:hover { background-color: var(--ha-accent) !important; }

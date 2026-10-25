@@ -1,0 +1,17 @@
+# https://blueprint.zip/docs/configs/confyml
+info:
+  name: "Habibi Aurora"
+  identifier: "habibiaurora"
+  description: "Tema original Habibih Cloud ID: navy indigo pekat, aksen biru primer, kartu server bersih."
+  version: "v1.0.0"
+  target: "beta-2026-01"
+  author: "Habibih Cloud ID"
+  icon: "assets/icon.png"
+  website: "https://github.com/HabibihID/habibiptero"
+
+admin:
+  view: "admin/view.blade.php"
+  css: "admin/admin.style.css"
+
+dashboard:
+  css: "client/client.style.css"

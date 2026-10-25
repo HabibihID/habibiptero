@@ -1,0 +1,116 @@
+/* ============================================================
+   HABIBI VERTEX v1.0.0 — tema original Habibih Cloud ID
+   Gaya: navy gelap, aksen hijau terang, login berlapis gradasi
+   ungu/biru. Ubah warna lewat variabel --hv-* di bawah.
+   ============================================================ */
+:root {
+  --hv-bg: #0a0e1d;
+  --hv-bg-2: #0d1330;
+  --hv-surface: #111831;
+  --hv-surface-2: #16204a;
+  --hv-border: rgba(148, 163, 255, 0.14);
+  --hv-text: #e7ebf7;
+  --hv-muted: #8b94b8;
+  --hv-accent: #3ed97a;
+  --hv-accent-2: #2fbf71;
+  --hv-accent-soft: rgba(62, 217, 122, 0.16);
+  --hv-violet: #6d5cff;
+  --hv-blue: #2f7bff;
+  --hv-danger: #f0524f;
+  --hv-radius: 14px;
+}
+
+/* ---------- dasar ---------- */
+body {
+  background-color: var(--hv-bg) !important;
+  color: var(--hv-text);
+}
+/* lapisan gradasi abstrak (ungu -> biru) ala layar login */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 30rem at 110% -10%, rgba(109, 92, 255, 0.28), transparent 60%),
+    radial-gradient(50rem 26rem at -10% 110%, rgba(47, 123, 255, 0.20), transparent 60%),
+    radial-gradient(34rem 18rem at 85% 115%, rgba(62, 217, 122, 0.10), transparent 60%),
+    linear-gradient(160deg, var(--hv-bg) 0%, var(--hv-bg-2) 100%);
+}
+::selection { background: var(--hv-accent); color: #06130b; }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--hv-surface-2) transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--hv-surface-2); border-radius: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------- permukaan / kartu ---------- */
+.bg-gray-900, .bg-neutral-900 { background-color: var(--hv-bg-2) !important; }
+.bg-gray-800, .bg-neutral-800 { background-color: var(--hv-surface) !important; }
+.bg-gray-700, .bg-neutral-700 { background-color: var(--hv-surface-2) !important; }
+.border-gray-700, .border-gray-800, .border-neutral-700, .border-neutral-800 {
+  border-color: var(--hv-border) !important;
+}
+.shadow-md, .shadow-lg {
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.45) !important;
+}
+.text-gray-400, .text-gray-500, .text-neutral-400 { color: var(--hv-muted) !important; }
+
+/* ---------- tautan & aksen ---------- */
+a { color: var(--hv-accent); }
+a:hover { color: var(--hv-accent-2); }
+
+/* ---------- tombol ---------- */
+.bg-primary-500, .bg-primary-600, .bg-blue-500, .bg-blue-600 {
+  background-color: var(--hv-accent-2) !important;
+}
+.hover\:bg-primary-400:hover, .hover\:bg-primary-600:hover,
+.hover\:bg-blue-400:hover, .hover\:bg-blue-600:hover {
+  background-color: var(--hv-accent) !important;
+}
+button { border-radius: 10px; }
+
+/* tombol daya server: start hijau, restart netral, stop merah */
+.bg-green-500, .bg-green-600 { background-color: var(--hv-accent-2) !important; }
+.bg-red-500, .bg-red-600 { background-color: var(--hv-danger) !important; }
+
+/* ---------- formulir ---------- */
+input, select, textarea {
+  background-color: var(--hv-bg-2) !important;
+  border-color: var(--hv-border) !important;
+  color: var(--hv-text) !important;
+  border-radius: 10px !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--hv-accent) !important;
+  box-shadow: 0 0 0 3px var(--hv-accent-soft) !important;
+  outline: none !important;
+}
+input::placeholder, textarea::placeholder { color: var(--hv-muted) !important; }
+label { color: var(--hv-muted); }
+
+/* ---------- navigasi server (sidebar sub-nav) ---------- */
+aside a, nav a { transition: background-color .15s ease, color .15s ease; }
+aside a:hover, nav a:hover { color: var(--hv-text) !important; }
+
+/* ---------- konsol ---------- */
+.xterm, .xterm-viewport, .xterm-screen {
+  background-color: #070a16 !important;
+}
+.xterm { padding: 6px; }
+
+/* ---------- lencana status ---------- */
+.bg-green-500\/10, .bg-green-400\/10 { background-color: var(--hv-accent-soft) !important; }
+
+/* ---------- login: kartu kaca di atas gradasi ---------- */
+form { caret-color: var(--hv-accent); }
+form button[type="submit"] {
+  background: linear-gradient(90deg, var(--hv-accent-2), var(--hv-accent)) !important;
+  color: #06130b !important;
+  font-weight: 600;
+  border: none !important;
+}
+form button[type="submit"]:hover { filter: brightness(1.07); }

@@ -1,0 +1,6 @@
+/* Habibi Vertex — sentuhan admin (AdminLTE) */
+.skin-blue .main-header .logo,
+.skin-blue .main-header .navbar { background-color: #0d1430 !important; }
+.skin-blue .sidebar-menu > li.active > a { border-left-color: #3ed97a !important; }
+a { color: #2fbf71; }
+.btn-primary { background-color: #2fbf71 !important; border-color: #28a862 !important; }
