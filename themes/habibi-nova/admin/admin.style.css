@@ -1,0 +1,6 @@
+/* Habibi Nova — sentuhan admin (AdminLTE) */
+.skin-blue .main-header .logo,
+.skin-blue .main-header .navbar { background-color: #0a0e1f !important; }
+.skin-blue .sidebar-menu > li.active > a { border-left-color: #7a98ff !important; }
+a { color: #7a98ff; }
+.btn-primary { background-color: #5b7fff !important; border-color: #4665d9 !important; }
